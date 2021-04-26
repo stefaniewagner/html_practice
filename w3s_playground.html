@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- HTML type declaration -->
+<html lang="en-DE">
+    <head>
+        <title>Eyo Winston</title>
+        <style>
+            body {
+                background-color:burlywood;
+                background-image:url(cheems.png);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:cover;
+                }
+            p {
+                color:darkblue;
+                font-family: fantasy;
+                }
+            a:link {
+                color:darkred;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color:teal;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            table{
+                border: 1px solid black;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th{
+                border: 1px solid black;
+            }
+            tr:nth-child(odd){
+                background-color: #dddddd;
+            }
+            tr:nth-child(even){
+                background-color: gray;
+            }
+            .city{
+                background-color:gray;
+                font-family:Verdana;
+            }
+            .center{
+                text-align: center;
+            }
+            #idHeader{
+                color:black;
+                padding:40px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <!-- visible part written within body -->
+    <body>
+        
+        <h1 style="font-size:60px; text-align:center;">Eyo Winston</h1>
+
+        <h3>Some Javascript</h3>
+        <button type="button" onclick="dateFunction()">Display Date and Time</button>
+        <p id="demo"></p>
+        
+        <!-- <script> is a client side script; use <noscript> to display alternate content for users whose browsers dont support client side scripts -->
+        <script>
+            function dateFunction(){
+                document.getElementById('demo').innerHTML=Date();
+                document.getElementById('demo').style.fontSize="25px";
+                document.getElementById('demo').style.color="green";
+            }
+        </script>
+
+        <iframe src="w3s_playground.html" style="height:300px;width:300px;border:10px solid black;" title="playground" name="playground"></iframe>
+
+        <p><a href="https://www.google.com" target="playground">google.com</a></p>
+
+        <h3 id="idHeader">Header with id</h3>
+
+        <!-- a class can be used by multiple html elements, but id has to be unique to only one -->
+
+        <h5 class="city center">Hello</h5>
+        <h5 class="city">There</h5>
+
+        <!-- class attribute can be used on any html element; class name is case sensitive; used by css and javascript to select and access specified elements -->
+        <div class="city">
+            <h3>Tokyo</h3>
+            <p style="font-family:Veranda;">man I can't wait to go to Tokyo</p>
+        </div>
+
+        <!-- inline, used to mark up part of text or something else -->
+        <p>I like <span style="color:olive; font-weight:bold;">big butts</span> and I cannot lie</p>
+
+        <!-- used as a container for other html elements -->
+        <div style="background-color: coral; color:darkblue; padding:10px;">
+            <p>Hello there</p>
+            <P>General Kenobi!</P>
+        </div>
+
+        <!-- an inline element cannot contain a block level element! -->
+        <span style="border:1px solid black;">span is an inline element, no new line, only horizonal as much as needed</span>
+        <div style="border:1px solid black;">div is a block element that stretches out horizontally and starts on a new line</div>
+
+        <h4>Groceries with Description</h4>
+        <dl>
+            <dt>Chimken Nuggies</dt>
+            <dd>-delicious</dd>
+            <dt>Loves</dt>
+            <dd>-all the loves</dd>
+        </dl>
+
+        <h4>Groceries with Priorities <!-- ordered list type=1,A,a,I,i --></h4>
+        <ol type="I" start="30">
+            <li>Loves</li>
+            <li>Chimken</li>
+            <li>Nuggies</li>
+        </ol>
+
+        <!-- these styles would be better put at the top, but because I want to show different unordered lists im doing it within the code -->
+        <!-- float:left displays the list horizontally, like for a navigation menu on a website -->
+        <ul style="list-style-type:none; margin:0; padding:0; overflow:hidden; background-color:#333333;">
+            <li style="float:left; color:white; padding:16px; text-align:center;">Home</li>
+            <li style="float:left; color:white; padding:16px; text-align:center;">Blog</li>
+            <li style="float:left; color:white; padding:16px; text-align:center;">Contact</li>
+        </ul>
+
+        <h4>Groceries</h4>
+        <ul style="list-style-type:circle;">
+            <li>Chimken</li>
+            <li>Nuggies</li>
+            <li>Loves</li>
+                <ul style="list-style-type:square;">
+                    <li>Cuddles</li>
+                    <li>Hugs</li>
+                </ul>
+        </ul>
+
+        <table>
+            <caption>Table of good boys</caption>
+            <tr>
+                <th>Name</th>
+                <th>Is good boy?</th>
+            </tr>
+            <tr>
+                <td>Pudgy</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Winston</td>
+                <td>Yes</td>
+            </tr>
+        </table>
+
+        <p><a href="#cheems">Click to visit Cheems</a></p>
+
+        <h2 title="purple winston" style="color:purple;">Eyo Winston</h2>
+        <h3 style="background-color: chocolate;">Eyo Winston</h3>
+        <h4 style="font-family:'Courier New', Courier, monospace; border: 5px solid seagreen; padding:40px; margin:50px">Eyo Winston</h4>
+        <h5 style="font-size:105%">Eyo Winston</h5>
+        <h6><del>Eyo Winston</del><ins>WiNsToN</ins></h6>
+
+        <hr>
+
+        <p>Blockquote</p>
+        <blockquote cite="www.google.com">
+            bitches
+            get
+            stitches
+        </blockquote>
+
+        <p>Here's a short quote: <q>Blablabla</q></p>
+
+        <abbr title="Cascading Style Sheets">CSS</abbr>
+
+        <p>Contact Information:</p>
+        <address>
+            Poncho<br>
+            Happy Town<br>
+            12345 Nuggies
+        </address>
+
+        <p><cite>The Hunger</cite> by Mochi</p>
+
+        <bdo dir="rtl">Written from right to left, rtl (bi-directional override)</bdo>
+
+        <hr>
+
+        <p><small>Awoooo</small></p>
+        <P>AWOOOOOOOO<br>OOO</p>
+
+        <hr>
+
+        <pre>
+            <b>ey <mark>pudgy</mark></b>
+            <i>can I get a</i>
+
+            <sub>owa</sub>                      <sup>owa</sup>
+
+            for the ~gravy train~
+        </pre>
+
+        <hr>
+        
+        <a href="https://www.w3schools.com" target="_blank">W3Schools Link</a>
+        <a href="https://www.w3schools.com"><img src="cheems.png" style="width:30px;height:40px;"></a>
+        <p><a href="mailto:stefanie@bosch.com">Email the Boschinator</a></p>
+        <button onclick="document.location='https://www.w3schools.com/html/html_links.asp'">Current Position in Tutorial</button>
+
+        <hr>
+
+        <img src="cheems.png" alt="Cheems" style="width:300px;height:400px" id="cheems">
+
+        <img src="shibe.gif" alt="Happy shibe" style="width:150px;height:90px;float:left;">
+
+                <!-- rgb(red, green, blue) each options from 0 to 255; black all 0, white all 255, shades of gray when all three parameters same number; 
+            rgba a=alpha, opacity -->
+        <!-- hex (hexadecimal) colors: #RRGGBB values from 0 to ff (same as 0 to 255); eg 1-99 then 9a-9f then a0-a9 then aa-af... -->
+        <!-- hsl(hue, saturation, lightness); hue=color 0-360 (0 red, 120 green, 240 blue); saturation (intensity of color) percent -> 
+            0%=shade of gray, 100%=color itself; lightness percent -> 0%=black, 100%=white; hsla(h, s, l, alpha=opacity) ;
+            shades of gray: hue and saturation = 0 -->
+
+            <h2 style="background-color: rgb(33, 265, 8);">rgb(33, 265, 8)</h2>
+            <h2 style="background-color: rgba(33, 265, 8, 0.5);">rgba(33, 265, 8, 0.5) same as above but 50% transparent</h2>
+            <h2 style="background-color: #ff3333;">#ff3333</h2>
+            <h2 style="background-color: hsl(3, 17%, 69%);">hsl(3, 17%, 69%)</h2>
+            <h2 style="background-color: hsl(3, 17%, 69%, 0.5);">hsl(3, 17%, 69%) same as above but 50% transparent</h2>
+    </body>
+</html>
