@@ -1,8 +1,30 @@
 <!DOCTYPE html>
 <!-- HTML type declaration -->
 <html lang="en-DE">
+    <!-- head is a container for: title, style, meta, link, script, and base elements -->
+    <!-- head is a conatinaer for metadata, data about data, which isn't displayed; its between html and body tags -->
     <head>
         <title>Eyo Winston</title>
+        
+        <!-- <link> rel="" href=".css" ;here to css file -->
+        
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML">
+        <meta name="description" content="HTML practice using a w3schools tutorial">
+        <meta name="author" content="Stefanie Bosch">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <base href="">
+        
+        <!-- <script> is a client side script; use <noscript> to display alternate content for users whose browsers dont support client side scripts -->
+        <script>
+            function dateFunction(){
+                document.getElementById('demo').innerHTML=Date();
+                document.getElementById('demo').style.fontSize="25px";
+                document.getElementById('demo').style.color="green";
+            }
+        </script>
+        
         <style>
             body {
                 background-color:burlywood;
@@ -61,15 +83,6 @@
         <h3>Some Javascript</h3>
         <button type="button" onclick="dateFunction()">Display Date and Time</button>
         <p id="demo"></p>
-        
-        <!-- <script> is a client side script; use <noscript> to display alternate content for users whose browsers dont support client side scripts -->
-        <script>
-            function dateFunction(){
-                document.getElementById('demo').innerHTML=Date();
-                document.getElementById('demo').style.fontSize="25px";
-                document.getElementById('demo').style.color="green";
-            }
-        </script>
 
         <iframe src="w3s_playground.html" style="height:300px;width:300px;border:10px solid black;" title="playground" name="playground"></iframe>
 
