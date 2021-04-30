@@ -70,7 +70,8 @@
                 color: white;
             }
             /* responsive layout; makes the two columns/boxes stack on top of each other instead of next to each other on small screens */
-            @media (max-width: 600px) {
+            /* if screen size 600px or less, make width of nav and article 100% of screen size, so they fill up the screen vs being next to each other */
+            @media only screen and (max-width: 600px) {
                 nav, article {
                     width: 100%;
                     height: auto;
@@ -128,7 +129,7 @@
     <!-- visible part written within body -->
     <body>
         
-        <h1 style="font-size:60px; text-align:center;">Eyo Winston</h1>
+        <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
         <header>
             <h3>Places to Travel to</h3>
@@ -292,14 +293,17 @@
 
         <hr>
 
-        <img src="cheems.png" alt="Cheems" style="width:300px;height:400px" id="cheems">
+        <!-- use <picture> to show differen images depending on screen size -->
+        <!-- max-width:100% so picture doesnt go bigger than original size -->
+        <!-- width:100% so picture takes up 100% width based on current screen size -->
+        <img src="cheems.png" alt="Cheems" style="max-width:100%;height:auto;" id="cheems">
 
         <img src="shibe.gif" alt="Happy shibe" style="width:150px;height:90px;float:left;">
 
-                <!-- rgb(red, green, blue) each options from 0 to 255; black all 0, white all 255, shades of gray when all three parameters same number; 
+            <!-- rgb(red, green, blue) each options from 0 to 255; black all 0, white all 255, shades of gray when all three parameters same number; 
             rgba a=alpha, opacity -->
-        <!-- hex (hexadecimal) colors: #RRGGBB values from 0 to ff (same as 0 to 255); eg 1-99 then 9a-9f then a0-a9 then aa-af... -->
-        <!-- hsl(hue, saturation, lightness); hue=color 0-360 (0 red, 120 green, 240 blue); saturation (intensity of color) percent -> 
+            <!-- hex (hexadecimal) colors: #RRGGBB values from 0 to ff (same as 0 to 255); eg 1-99 then 9a-9f then a0-a9 then aa-af... -->
+            <!-- hsl(hue, saturation, lightness); hue=color 0-360 (0 red, 120 green, 240 blue); saturation (intensity of color) percent -> 
             0%=shade of gray, 100%=color itself; lightness percent -> 0%=black, 100%=white; hsla(h, s, l, alpha=opacity) ;
             shades of gray: hue and saturation = 0 -->
 
