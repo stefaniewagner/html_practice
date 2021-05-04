@@ -124,6 +124,13 @@
                 padding:40px;
                 text-align:center;
             }
+            aside {
+                width: 30%;
+                float: right;
+                padding-left: 15px;
+                font-style: italic;
+                background-color: lightgray;
+            }
         </style>
     </head>
     <!-- visible part written within body -->
@@ -131,6 +138,12 @@
         
         <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
+        <aside>
+            <h3>About Asides</h3>
+            <p>Asides are content aside from the content it is placed in, eg. a sidebar</p>
+            <p>This content should be indirectly related to the surrounding content</p>
+        </aside>
+        
         <article>
             <h3>About Articles</h3>
             <p>Articles need to be able to stand independently and make sense on its own.</p>
@@ -325,7 +338,11 @@
         <!-- width:100% so picture takes up 100% width based on current screen size -->
         <img src="cheems.png" alt="Cheems" style="max-width:100%;height:auto;" id="cheems">
 
-        <img src="shibe.gif" alt="Happy shibe" style="width:150px;height:90px;float:left;">
+        <picture>
+            <img src="shibe.gif" alt="Happy shibe" style="width:150px;height:90px;float:left;">
+            <!--figcaption has to be first or last element of picture element-->
+            <figcaption>A happy boy</figcaption>
+        </picture>
 
             <!-- rgb(red, green, blue) each options from 0 to 255; black all 0, white all 255, shades of gray when all three parameters same number; 
             rgba a=alpha, opacity -->
