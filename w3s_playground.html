@@ -6,7 +6,8 @@
     <head>
         <title>Eyo Winston</title>
         
-        <!-- <link> rel="" href=".css" ;here to css file -->
+        <!-- <link rel="stylesheet" href="styles.css"> ;here to css file -->
+        <!-- <script src="myscript.js"> ;here to javascript file-->
         
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML">
@@ -14,9 +15,15 @@
         <meta name="author" content="Stefanie Bosch">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- base href="https://www.------.com/" target="_blank" ;sets up base URL for all relative URLs-; _blank=open in new window -->
+        <!--
+             base href="https://www.------.com/" target="_blank" ;sets up base URL for all relative URLs-; 
+            _blank=open in new window 
+        -->
         
-        <!-- <script> is a client side script; use <noscript> to display alternate content for users whose browsers dont support client side scripts -->
+        <!-- 
+            <script> is a client side script; use <noscript> to display alternate content for users whose browsers dont support 
+            client side scripts 
+        -->
         <script>
             function dateFunction(){
                 document.getElementById('demo').innerHTML=Date();
@@ -69,8 +76,10 @@
                 text-align: center;
                 color: white;
             }
-            /* responsive layout; makes the two columns/boxes stack on top of each other instead of next to each other on small screens */
-            /* if screen size 600px or less, make width of nav and article 100% of screen size, so they fill up the screen vs being next to each other */
+            /* responsive layout; makes the two columns/boxes stack on top of each other instead of next to each other 
+            on small screens */
+            /* if screen size 600px or less, make width of nav and article 100% of screen size, 
+            so they fill up the screen vs being next to each other */
             @media only screen and (max-width: 600px) {
                 nav, article {
                     width: 100%;
@@ -98,28 +107,28 @@
                 background-color: transparent;
                 text-decoration: underline;
             }
-            table{
+            table {
                 border: 1px solid black;
                 border-collapse: collapse;
                 width: 100%;
             }
-            td, th{
+            td, th {
                 border: 1px solid black;
             }
-            tr:nth-child(odd){
+            tr:nth-child(odd) {
                 background-color: #dddddd;
             }
-            tr:nth-child(even){
+            tr:nth-child(even) {
                 background-color: gray;
             }
-            .city{
+            .city {
                 background-color:gray;
                 font-family:Verdana;
             }
-            .center{
+            .center {
                 text-align: center;
             }
-            #idHeader{
+            #idHeader {
                 color:black;
                 padding:40px;
                 text-align:center;
@@ -196,7 +205,8 @@
         <button type="button" onclick="dateFunction()">Display Date and Time</button>
         <p id="demo"></p>
 
-        <iframe src="w3s_playground.html" style="height:300px;width:300px;border:10px solid black;" title="playground" name="playground"></iframe>
+        <iframe src="w3s_playground.html" style="height:300px;width:300px;border:10px solid black;" 
+        title="playground" name="playground"></iframe>
 
         <p><a href="https://www.google.com" target="playground">google.com</a></p>
 
@@ -207,7 +217,10 @@
         <h5 class="city center">Hello</h5>
         <h5 class="city">There</h5>
 
-        <!-- class attribute can be used on any html element; class name is case sensitive; used by css and javascript to select and access specified elements -->
+        <!-- 
+            class attribute can be used on any html element; class name is case sensitive; 
+            used by css and javascript to select and access specified elements 
+        -->
         <div class="city">
             <h3>Tokyo</h3>
             <p style="font-family:Veranda;">man I can't wait to go to Tokyo</p>
@@ -241,7 +254,10 @@
             <li>Nuggies</li>
         </ol>
 
-        <!-- these styles would be better put at the top, but because I want to show different unordered lists im doing it within the code -->
+        <!-- 
+            these styles would be better put at the top, but because I want to show different unordered lists 
+            im doing it within the code 
+        -->
         <!-- float:left displays the list horizontally, like for a navigation menu on a website -->
         <ul style="list-style-type:none; margin:0; padding:0; overflow:hidden; background-color:#333333;">
             <li style="float:left; color:white; padding:16px; text-align:center;">Home</li>
@@ -280,7 +296,8 @@
 
         <h2 title="purple winston" style="color:purple;">Eyo Winston</h2>
         <h3 style="background-color: chocolate;">Eyo Winston</h3>
-        <h4 style="font-family:'Courier New', Courier, monospace; border: 5px solid seagreen; padding:40px; margin:50px">Eyo Winston</h4>
+        <h4 style="font-family:'Courier New', Courier, monospace; border: 5px solid seagreen; padding:40px; margin:50px">
+            Eyo Winston</h4>
         <h5 style="font-size:105%">Eyo Winston</h5>
         <h6><del>Eyo Winston</del><ins>WiNsToN</ins></h6>
 
@@ -344,12 +361,20 @@
             <figcaption>A happy boy</figcaption>
         </picture>
 
-            <!-- rgb(red, green, blue) each options from 0 to 255; black all 0, white all 255, shades of gray when all three parameters same number; 
-            rgba a=alpha, opacity -->
-            <!-- hex (hexadecimal) colors: #RRGGBB values from 0 to ff (same as 0 to 255); eg 1-99 then 9a-9f then a0-a9 then aa-af... -->
-            <!-- hsl(hue, saturation, lightness); hue=color 0-360 (0 red, 120 green, 240 blue); saturation (intensity of color) percent -> 
-            0%=shade of gray, 100%=color itself; lightness percent -> 0%=black, 100%=white; hsla(h, s, l, alpha=opacity) ;
-            shades of gray: hue and saturation = 0 -->
+            <!-- 
+                rgb(red, green, blue) each options from 0 to 255; black all 0, white all 255, shades of gray when 
+                all three parameters same number; rgba a=alpha, opacity 
+            -->
+            <!-- 
+                hex (hexadecimal) colors: #RRGGBB values from 0 to ff (same as 0 to 255); 
+                eg 1-99 then 9a-9f then a0-a9 then aa-af... 
+            -->
+            <!-- 
+                hsl(hue, saturation, lightness); hue=color 0-360 (0 red, 120 green, 240 blue); 
+                saturation (intensity of color) percent -> 0%=shade of gray, 100%=color itself; 
+                lightness percent -> 0%=black, 100%=white; hsla(h, s, l, alpha=opacity) ;
+                shades of gray: hue and saturation = 0 
+            -->
 
             <h2 style="background-color: rgb(33, 265, 8);">rgb(33, 265, 8)</h2>
             <h2 style="background-color: rgba(33, 265, 8, 0.5);">rgba(33, 265, 8, 0.5) same as above but 50% transparent</h2>
