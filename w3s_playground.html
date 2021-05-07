@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- HTML type declaration -->
-<html lang="en-DE">
+<html lang="en-DE"> <!-- also add in <html>, <hmtl xmlns="..." ,specifies the xml namespace for document (when using xhtml)-->
     <!-- head is a container for: title, style, meta, link, script, and base elements -->
     <!-- head is a conatinaer for metadata, data about data, which isn't displayed; its between html and body tags -->
     <head>
@@ -9,11 +9,12 @@
         <!-- <link rel="stylesheet" href="styles.css"> ;here to css file -->
         <!-- <script src="myscript.js"> ;here to javascript file-->
         
-        <meta charset="UTF-8">
-        <meta name="keywords" content="HTML">
-        <meta name="description" content="HTML practice using a w3schools tutorial">
-        <meta name="author" content="Stefanie Bosch">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- in xhtml, empty elements must always be closed ( /> at end) -->
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="HTML" />
+        <meta name="description" content="HTML practice using a w3schools tutorial" />
+        <meta name="author" content="Stefanie Bosch" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!--
              base href="https://www.------.com/" target="_blank" ;sets up base URL for all relative URLs-; 
@@ -183,7 +184,7 @@
         </pre>
         <!-- samp = sample (output) -->
         <p>Error message:</p>
-        <p><samp>404 <br> Page not found</samp></p>
+        <p><samp>404 <br /> Page not found</samp></p>
         <!-- kbd = keyboard (input) -->
         <p>Press <kbd>Ctrl + S</kbd> to save the page</p>
 
@@ -308,7 +309,7 @@
         <h5 style="font-size:105%">Eyo Winston</h5>
         <h6><del>Eyo Winston</del><ins>WiNsToN</ins></h6>
 
-        <hr>
+        <hr> /
 
         <p>Blockquote</p>
         <blockquote cite="www.google.com">
@@ -332,12 +333,12 @@
 
         <bdo dir="rtl">Written from right to left, rtl (bi-directional override)</bdo>
 
-        <hr>
+        <hr />
 
         <p><small>Awoooo</small></p>
         <P>AWOOOOOOOO<br>OOO</p>
 
-        <hr>
+        <hr />
 
         <pre>
             <b>ey <mark>pudgy</mark></b>
@@ -348,22 +349,22 @@
             for the ~gravy train~
         </pre>
 
-        <hr>
+        <hr />
         
         <a href="https://www.w3schools.com" target="_blank">W3Schools Link</a>
-        <a href="https://www.w3schools.com"><img src="cheems.png" style="width:30px;height:40px;"></a>
+        <a href="https://www.w3schools.com"><img src="cheems.png" alt="Cheems" style="width:30px;height:40px;" /></a>
         <p><a href="mailto:stefanie@bosch.com">Email the Boschinator</a></p>
         <button onclick="document.location='https://www.w3schools.com/html/html_links.asp'">Current Position in Tutorial</button>
 
-        <hr>
+        <hr />
 
         <!-- use <picture> to show differen images depending on screen size -->
         <!-- max-width:100% so picture doesnt go bigger than original size -->
         <!-- width:100% so picture takes up 100% width based on current screen size -->
-        <img src="cheems.png" alt="Cheems" style="max-width:100%;height:auto;" id="cheems">
+        <img src="cheems.png" alt="Cheems" style="max-width:100%;height:auto;" id="cheems" />
 
         <picture>
-            <img src="shibe.gif" alt="Happy shibe" style="width:150px;height:90px;float:left;">
+            <img src="shibe.gif" alt="Happy shibe" style="width:150px;height:90px;float:left;" />
             <!--figcaption has to be first or last element of picture element-->
             <figcaption>A happy boy</figcaption>
         </picture>
