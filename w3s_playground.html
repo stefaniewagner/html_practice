@@ -148,6 +148,39 @@
         
         <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
+        <h3>HTML Forms</h3>
+        <form> <!-- <form action="/action_page.php"> ;form-data sent to action_page.php (form-handler) -->
+            <!-- form-handler is usually a file on the server with a script for processing input data -->
+            <label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" value="Stefanie"><br />
+            <label for="lname">Last name:</label><br />
+            <input type="text" id="lname" name="lname" value="Bosch"><br /><br />
+            <input type="submit" value="Submit">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <input type="radio" id="orange" name="color" value="orange">
+            <label for="orange">Orange</label><br />
+            <input type="radio" id="yellow" name="color" value="yellow">
+            <label for="yellow">Yellow</label><br />
+            <input type="radio" id="green" name="color" value="green">
+            <label for="green">Green</label>
+        </form>
+
+        <br /><br />
+
+        <form>
+            <input type="checkbox" id="food1" name="food1" value="pizza">
+            <label for="food1">I want pizza</label><br />
+            <input type="checkbox" id="food2" name="food2" value="pasta">
+            <label for="food2">I want pasta</label><br />
+            <input type="checkbox" id="food3" name="food3" value="salad">
+            <label for="food3">I want salad</label><br /><br />
+            <input type="submit" value="Submit">
+        </form>
+
         <h3>Testing Symbols/Entities</h3>
         <p>Start with &# and end with a ;</p>
         <p>Different ways to write the euro symbol, look at code: €, &euro;, &#8364;, &#x20AC;</p>
