@@ -149,8 +149,10 @@
         <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
         <h3>HTML Forms</h3>
-        <form> <!-- <form action="/action_page.php"> ;form-data sent to action_page.php (form-handler) -->
-            <!-- form-handler is usually a file on the server with a script for processing input data -->
+        <form> <!-- <form action="/action_page.php"> ;form-data sent to action_page.php (form-handler) when 'submit' is clicked -->
+            <!-- form-handler is usually a file on the server with a server-side script for processing input data -->
+            <!-- if 'action' attribute is omitted, the action is set to the current page-->
+            <!-- <form action="..." target="_blank"> ;target->where to display response, _blank is in a new window -->
             <label for="fname">First name:</label><br />
             <input type="text" id="fname" name="fname" value="Stefanie"><br />
             <label for="lname">Last name:</label><br />
