@@ -149,7 +149,9 @@
         <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
         <h3>HTML Forms</h3>
-        <form> <!-- <form action="/action_page.php"> ;form-data sent to action_page.php (form-handler) when 'submit' is clicked -->
+        <form autocomplete="on"> 
+            <!-- autocomlete = "on"/"off" based on previous values the user has entered before -->
+            <!-- <form action="/action_page.php"> ;form-data sent to action_page.php (form-handler) when 'submit' is clicked -->
             <!-- form-handler is usually a file on the server with a server-side script for processing input data -->
             <!-- if 'action' attribute is omitted, the action is set to the current page-->
             <!-- <form action="..." target="_blank"> ;target->where to display response, _blank is in a new window -->
@@ -182,6 +184,13 @@
             <label for="food3">I want salad</label><br /><br />
             <input type="submit" value="Submit">
         </form>
+
+        <!-- <form action="/action_page.php" method="get"> -->
+        <!-- get sends and shows name/pair values in URL, length is limited, good for non-secure data-->
+        <!-- <form action="/action_page.php" method="post"> -->
+        <!-- post sends data within http request, not shown in URL, no length limit, good for secure data-->
+        <!-- <form action="/action_page.php" novalidate> -->
+        <!-- novalidate specifies that the input should not be validated when submitted -->
 
         <h3>Testing Symbols/Entities</h3>
         <p>Start with &# and end with a ;</p>
