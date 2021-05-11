@@ -192,6 +192,23 @@
         <!-- <form action="/action_page.php" novalidate> -->
         <!-- novalidate specifies that the input should not be validated when submitted -->
 
+        <br /><br />
+
+        <form>
+            <label for="ice_cream">Pick an ice cream flavor:</label>
+            <!-- select defines a drop down list -->
+            <!-- add 'size="x"'  in <select> to show x results at once -->
+            <!-- add 'multiple' in <select> to let users choose multiple (holding ctrl/cmd) -->
+            <select id="ice_cream" name="ice_cream">
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="strawberry" selected>Strawberry</option>
+                <option value="pistachio">Pistachio</option>
+            </select>
+        </form>
+
+        <br /><br />
+
         <h3>Testing Symbols/Entities</h3>
         <p>Start with &# and end with a ;</p>
         <p>Different ways to write the euro symbol, look at code: €, &euro;, &#8364;, &#x20AC;</p>
