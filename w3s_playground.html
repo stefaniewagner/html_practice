@@ -227,6 +227,8 @@
                 <label for="laname">Last name:</label><br />
                 <input type="text" id="laname"><br /><br />
                 <input type="submit" value="Submit">
+                <!-- reset button resets values to default when clicked -->
+                <input type="reset">
             </fieldset>
         </form>
 
@@ -256,6 +258,47 @@
             <output name="x" for="a b"></output>
             <br /><br />
             <input type="submit">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username"><br />
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" name="password">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="favcolor">What is your favorite color?</label>
+            <!-- a color picker can show up in input field, depending on browser support  -->
+            <input type="color" id="favcolor" name="favcolor" value="#aabbcc">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="birthday">When is your birthday?</label>
+            <!-- a data picker can show up in input field, depending on browser support -->
+            <!-- min and max attributes add restrictions to dates -->
+            <input type="date" id="birthday" name="birthday" min="1990-01-01" max="2021-05-21">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="datetimebday">Date and time of birthday:</label>
+            <!-- datetime-local is not supported in firefox, safari, or internet explorer 12 (or earlier) -->
+            <input type="datetime-local" id="datetimebday" name="datetimebday">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email">
         </form>
 
         <br /><br />
