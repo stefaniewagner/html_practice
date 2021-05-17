@@ -232,6 +232,34 @@
 
         <br /><br />
 
+        <!-- datalist element defines a list of pre-defined options for an input element -->
+        <!-- the list attribute of input element must be the same as id attribute of datalist element -->
+        <form>
+            <input list="fruits" name="fruit">
+            <datalist id="fruits">
+                <option value="Apple">
+                <option value="Pear">
+                <option value="Cherry">
+                <option value="Banana">
+            </datalist>
+            <input type="submit">
+        </form>
+
+        <br /><br />
+
+        <!-- output element represents the result of a calculation -->
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br /><br />
+            <input type="submit">
+        </form>
+
+        <br /><br />
+
         <h3>Testing Symbols/Entities</h3>
         <p>Start with &# and end with a ;</p>
         <p>Different ways to write the euro symbol, look at code: €, &euro;, &#8364;, &#x20AC;</p>
