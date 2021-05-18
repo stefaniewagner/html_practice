@@ -297,8 +297,75 @@
         <br /><br />
 
         <form>
+            <label for="monthdaybday">Month and day of birthday:</label>
+            <!-- month has same restrictions as datetime-local (see above) except IE11 or earlier-->
+            <input type="month" id="monthdaybday" name="monthdaybday">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="bdayweek">Week of birthday:</label>
+            <!-- week has same restrictions as month-->
+            <input type="week" id="bdayweek" name="bdayweek">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="when">Pick a good time:</label>
+            <!-- time type not supported in Safari or IE12 or earlier -->
+            <input type="time" id="when" name="when">
+        </form>
+
+        <br /><br />
+
+        <form>
             <label for="email">Enter your email:</label>
             <input type="email" id="email" name="email">
+            <!-- hidden field is not shown to user but data is still sent when everything is submitted -->
+            <!-- hidden field can still be seen using browser dev tools or 'view source' functionality -->
+            <!-- often stores information to help database get updated -->
+            <input type="hidden" id="custId" name="custId" value="3487">
+            <input type="submit" value="Submit">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="quantity">Pick a number between one and ten:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10">
+            <input type="submit" value="Submit">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="lookup">Search field behaves like a regular text field:</label>
+            <input type="search" id="lookup" name="lookup">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="phonenumber">Enter a phone number:</label>
+            <input type="tel" id="phonenumber" name="phonenumber" placeholder="0000-12345678" 
+            pattern="[0-9]{4}-[0-9]{8}" required><br />
+            <small>Format: 0000-12345678</small>
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="website">Enter your website:</label>
+            <input type="url" id="website" name="website">
         </form>
 
         <br /><br />
