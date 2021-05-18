@@ -155,11 +155,14 @@
             <!-- form-handler is usually a file on the server with a server-side script for processing input data -->
             <!-- if 'action' attribute is omitted, the action is set to the current page-->
             <!-- <form action="..." target="_blank"> ;target->where to display response, _blank is in a new window -->
-            <label for="fname">First name:</label><br />
-            <input type="text" id="fname" name="fname" value="Stefanie"><br />
-            <label for="lname">Last name:</label><br />
-            <input type="text" id="lname" name="lname" value="Bosch"><br /><br />
-            <input type="submit" value="Submit">
+            <label for="fname">First name (readonly):</label><br />
+            <!-- value attribute specifies initial value of input field -->
+            <!-- read only: can't be modified but will be sent when submitted -->
+            <input type="text" id="fname" name="fname" value="Stefanie" readonly><br />
+            <label for="lname">Last name (disabled):</label><br />
+            <!-- disabled: can't be modififed, will not be sent when submitted -->
+            <input type="text" id="lname" name="lname" value="Bosch" disabled><br /><br />
+            <input type="submit" value="Write down">
         </form>
 
         <br /><br />
@@ -340,6 +343,13 @@
         <br /><br />
 
         <form>
+            <label for="myfile">Select multiple files:</label>
+            <input type="file" id="myfile" name="myfile" multiple>
+        </form>
+
+        <br /><br />
+
+        <form>
             <label for="quantity">Pick a number between one and ten:</label>
             <input type="number" id="quantity" name="quantity" min="1" max="10">
             <input type="submit" value="Submit">
@@ -365,7 +375,9 @@
 
         <form>
             <label for="website">Enter your website:</label>
-            <input type="url" id="website" name="website">
+            <!-- size is visible width of input field, in characters -->
+            <!-- maxlength only accepts that number of characters, but does not notify user, this requires javascript code -->
+            <input type="url" id="website" name="website" size="100" maxlength="3">
         </form>
 
         <br /><br />
