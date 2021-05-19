@@ -359,7 +359,9 @@
 
         <br /><br />
 
-        <form>
+        <!-- a form can have an id, and an input can be placed outside of the form; as long as
+        it has <input form="form1">, it will still be a part of the form with id="form1" -->
+        <form id="form1">
             <label for="lookup">Search field behaves like a regular text field:</label>
             <input type="search" id="lookup" name="lookup">
         </form>
@@ -390,6 +392,18 @@
             <label for="points">Points in steps of three:</label>
             <input type="number" id="points" name="points" step="3">
         </form>
+
+        <!-- form action="/action_page.php"
+        ...
+        <input ... formaction="/action_page2.php">
+        formaction overrides action -->
+        <!-- same as above, method="get/post" in form, but input formmethod="get/post" overrides it -->
+        <!-- input target="_blank" displays result in new window-->
+        <!-- all three above work only in input types submit and image -->
+
+        <!-- input formnovalidate="formnovalidate" specifies that input element should not be validated when submitted 
+        only for submit input type -->
+        <!-- or <form> novalidate attribute: whole form shouldn't be validated when submitted -->
 
         <br /><br />
 
