@@ -226,9 +226,10 @@
             <fieldset>
                 <legend>Name, using fieldset element:</legend>
                 <label for="finame">First name:</label><br />
-                <input type="text" id="finame"><br />
+                <!-- autofocus: cursor is on input, so typing can immediately begin -->
+                <input type="text" id="finame" autofocus><br />
                 <label for="laname">Last name:</label><br />
-                <input type="text" id="laname"><br /><br />
+                <input type="text" id="laname" autocomplete="on"><br /><br />
                 <input type="submit" value="Submit">
                 <!-- reset button resets values to default when clicked -->
                 <input type="reset">
@@ -238,6 +239,7 @@
         <br /><br />
 
         <!-- datalist element defines a list of pre-defined options for an input element -->
+        <!-- datalist not supported in safari 12.0 or earlier -->
         <!-- the list attribute of input element must be the same as id attribute of datalist element -->
         <form>
             <input list="fruits" name="fruit">
@@ -366,8 +368,10 @@
 
         <form>
             <label for="phonenumber">Enter a phone number:</label>
+            <!-- pattern attribut not supported in safari 10 or earlier -->
+            <!-- another pattern example: [A-Za-z]{3} which contains only three letters -->
             <input type="tel" id="phonenumber" name="phonenumber" placeholder="0000-12345678" 
-            pattern="[0-9]{4}-[0-9]{8}" required><br />
+            pattern="[0-9]{4}-[0-9]{8}" title="12 numbers long phone number" required><br />
             <small>Format: 0000-12345678</small>
         </form>
 
@@ -378,6 +382,13 @@
             <!-- size is visible width of input field, in characters -->
             <!-- maxlength only accepts that number of characters, but does not notify user, this requires javascript code -->
             <input type="url" id="website" name="website" size="100" maxlength="3">
+        </form>
+
+        <br /><br />
+
+        <form>
+            <label for="points">Points in steps of three:</label>
+            <input type="number" id="points" name="points" step="3">
         </form>
 
         <br /><br />
