@@ -148,7 +148,104 @@
         
         <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
-        <h3>HTML Forms</h3>
+        <h2>HTML Graphics</h2>
+        <!-- <canvas> element is a container that uses javascript to draw graphics -->
+        
+        <canvas id="firstCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element</canvas>
+        <script>
+            var c = document.getElementById("firstCanvas");
+            var ctx = c.getContext("2d");
+            /*canvas upper left starts at (0,0), lower right is size, here (200,100)*/
+            /*moveTo goes to point without drawing*/
+            /*lineTo draws a line from last position to new position*/
+            ctx.moveTo(30,30);
+            ctx.lineTo(200,100);
+            ctx.moveTo(180,20);
+            ctx.lineTo(30,90)
+            ctx.stroke();
+        </script>
+
+        <canvas id="secondCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element</canvas>
+        <script>
+            var d = document.getElementById("secondCanvas");
+            var dtx = d.getContext("2d");
+            dtx.beginPath();
+            /* arc(centerx, centery, radius, startpoint, endpoint)*/
+            dtx.arc(100,50,20,0,2*Math.PI);
+            dtx.stroke();
+            var dty = d.getContext("2d");
+            dty.beginPath();
+            dtx.arc(100,50,60,0,1.5*Math.PI);
+            dtx.stroke();
+        </script>
+
+        <canvas id="thirdCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element</canvas>
+        <script>
+            var e = document.getElementById("thirdCanvas");
+            var etx = e.getContext("2d");
+            etx.font = "30px Arial";
+            // fillText(text, upperleftx, upperlefty)
+            etx.fillText("Hello There", 20, 60);
+        </script>
+
+        <canvas id="fourthCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element</canvas>
+        <script>
+            var f = document.getElementById("fourthCanvas");
+            var ftx = f.getContext("2d");
+            ftx.font = "30px Arial";
+            ftx.strokeText("Hello There", 20, 60);
+        </script>
+
+        <canvas id="fifthCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element</canvas>
+        <script>
+            var g = document.getElementById("fifthCanvas");
+            var gtx = g.getContext("2d");
+            // create gradient
+            // createLinearGradient(gradualness of gradient,angle of gradient(upper left to lower right curve),
+            // midpoint of gradient,angle of gradient(lower left to upper right curve))
+            var grd = gtx.createLinearGradient(0,0,150,0);
+            // left color
+            grd.addColorStop(0,"blue");
+            // right color
+            grd.addColorStop(1,"purple");
+            // fill with gradient
+            gtx.fillStyle = grd;
+            // fillRect(upperleftx, upperlefty, width, height)
+            gtx.fillRect(0,0,200,100);
+        </script>
+
+        <canvas id="sixthCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element</canvas>
+        <script>
+            var h = document.getElementById("sixthCanvas");
+            var htx = h.getContext("2d");
+            //createRadialGradient(xValueOfStartingCircle, yValueOfStartingCircle, radiusOfStartingCircle,
+            //xValueOfEndingcircle, yValueOfEndingCircle, radiusOfEndingCircle)
+            var hrd = htx.createRadialGradient(100,50,10,100,50,120);
+            hrd.addColorStop(0,"green");
+            hrd.addColorStop(1,"white");
+            htx.fillStyle = hrd;
+            htx.fillRect(0,0,200,100);
+        </script>
+
+        <canvas id="seventhCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the canvas element</canvas>
+        <script>
+            window.onload = function() {
+                var i = document.getElementById("seventhCanvas");
+                var itx = i.getContext("2d");
+                var img = document.getElementById("cheems");
+                //drawImage(startX, startY, width, height)
+                itx.drawImage(img,50,0,70,100);
+            }
+        </script>
+
+        <h2>HTML Forms</h2>
         <form autocomplete="on"> 
             <!-- autocomlete = "on"/"off" based on previous values the user has entered before -->
             <!-- <form action="/action_page.php"> ;form-data sent to action_page.php (form-handler) when 'submit' is clicked -->
@@ -227,7 +324,7 @@
                 <legend>Name, using fieldset element:</legend>
                 <label for="finame">First name:</label><br />
                 <!-- autofocus: cursor is on input, so typing can immediately begin -->
-                <input type="text" id="finame" autofocus><br />
+                <input type="text" id="finame"><br />
                 <label for="laname">Last name:</label><br />
                 <input type="text" id="laname" autocomplete="on"><br /><br />
                 <input type="submit" value="Submit">
