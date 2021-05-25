@@ -150,6 +150,31 @@
 
         <h2>HTML Media</h2>
 
+        <div style="text-align:center;"></div>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeLarge()">Large</button>
+            <br />
+            <video id="eyowinston" width="200" controls>
+                <!-- autoplay : start video automatically -->
+                <!-- autoplay muted : start video automatically, but muted -->
+                <!-- can have multiple <source> files, browser will choose first recognized format -->
+                <source src="eyo_winston.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        </div>
+
+        <script>
+            var myVideo = document.getElementById("eyowinston");
+
+            function makeSmall(){
+                myVideo.width="200";
+            }
+
+            function makeLarge(){
+                myVideo.width="600";
+            }
+        </script>
+
         <br /><br />
 
         <h2>HTML Graphics</h2>
