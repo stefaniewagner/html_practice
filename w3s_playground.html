@@ -141,6 +141,13 @@
                 font-style: italic;
                 background-color: lightgray;
             }
+            #div1, #div2 {
+                float: left;
+                width: 100px;
+                height: 130px;
+                padding: 10px;
+                border: 1px solid #1100ff;
+            }
         </style>
     </head>
     <!-- visible part written within body -->
@@ -149,6 +156,35 @@
         <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
         <h2>HTML APIs</h2>
+
+        <script>
+            function allowDrop(ev){
+                //by default, elements can not be dropped in other elements; this allows it to happen
+                ev.preventDefault();
+            }
+
+            function drag(ev){
+                // text=data type, ev.target.id= id of drag1
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev){
+                //default is element is opened as a link on drop
+                ev.preventDefault();
+                //returns data that is set to same type in setData() method
+                var data = ev.dataTransfer.getData("text");
+                //data is id of dragged element, drag1, then append dragged element into dropped element
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+
+        <p>Drag Cheems between the boxes:</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag1" src="cheems.png" draggable="true" ondragstart="drag(event)" width="90" height="120">
+        </div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
 
         <p>Click the button to find out your coordinates</p>
         <button onclick="getCoordinates()">Click here for your coordinates</button>
