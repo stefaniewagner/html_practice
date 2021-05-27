@@ -148,6 +148,63 @@
         
         <h1 style="font-size:10vw; text-align:center;">Eyo Winston</h1>
 
+        <h2>HTML APIs</h2>
+
+        <p>Click the button to find out your coordinates</p>
+        <button onclick="getCoordinates()">Click here for your coordinates</button>
+        <p id="coordinates"></p>
+        <!-- <div id="mapholder" width="400" height="300"></div> -->
+        <script>
+            var x = document.getElementById("coordinates");
+
+            function getCoordinates(){
+                if(navigator.geolocation){
+                    //navigator.geolocation.watchPosition(showPosition) keeps checking position
+                    //clearWatch()  to stop watchPosition() method
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                    //navigator.geolocation.getCurrentPosition(mapPosition, showError);
+                }
+                else{
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            /*
+            function mapPosition(position) {
+                    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+                    var img_url = 
+                    "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+                    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+                }
+            */
+
+            function showPosition(position){
+                x.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+            }
+
+            function showError(error){
+                switch(error.code){
+                    case error.PERMISSON_DENIED:
+                        x.innerHTML = "User denied the request for Geolocation."
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHTML = "Location information is unavailable."
+                        break;
+                    case error.TIMEOUT:
+                        x.innerHTML = "The request to get user location timed out."
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        x.innerHTML = "An unknown error occured."
+                        break;
+                }
+            }
+        </script>
+
+        <br /><br />
+
         <h2>HTML Media</h2>
 
         <div style="text-align:center;"></div>
