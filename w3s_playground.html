@@ -158,6 +158,29 @@
         <h2>HTML APIs</h2>
 
         <script>
+            function clickCounter(){
+                if(typeof(Storage) !== "undefined"){
+                    //local storage: information is not deleted
+                    //sessionStorage: data deleted when user closes the tab
+                    if(localStorage.clickcount){
+                        localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    }
+                    else{
+                        localStorage.clickcount = 1;
+                    }
+                    document.getElementById("result").innerHTML = "You have clicked the button " + 
+                    localStorage.clickcount + " time(s).";
+                }
+                else{
+                    document.getElementById("result").innerHTML = "Sorry, your browser doesn't support web storage."
+                }
+            }
+        </script>
+
+        <p><button onclick="clickCounter()" type="button">Click me to increase the counter!</button></p>
+        <div id="result"></div>
+
+        <script>
             function allowDrop(ev){
                 //by default, elements can not be dropped in other elements; this allows it to happen
                 ev.preventDefault();
