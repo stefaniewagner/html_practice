@@ -157,9 +157,21 @@
 
         <h2>HTML APIs</h2>
 
+        <!-- SSE: server sent events; when a web page automatically gets updated from a server 
+        var source = new EventSource("demo_sse.php")
+        source.onmessage = function(event){
+            document.getElementById("result")innerHTML  += event.data + "<br>";
+        }-->
+
+        <!-- web workers run javascript in the background without affecting perforamance of the page 
+        if(typeof(Worker)!==undefined){
+            w = new Worker("demo_worker.js")
+        }-->
+
         <script>
             function clickCounter(){
                 if(typeof(Storage) !== "undefined"){
+                    //with web storage, data is stored locally within the users browser
                     //local storage: information is not deleted
                     //sessionStorage: data deleted when user closes the tab
                     if(localStorage.clickcount){
